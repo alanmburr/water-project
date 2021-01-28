@@ -4,6 +4,21 @@
     <title>Coming Soon...</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script>
+      const favicon = document.querySelector("link[rel=icon]");
+      if (favicon) {
+        const emoji = favicon.getAttribute("data-emoji");
+        if (emoji) {
+          const canvas = document.createElement("canvas");
+          canvas.height = 64;
+          canvas.width = 64;
+          const ctx = canvas.getContext("2d");
+          ctx.font = "64px serif";
+          ctx.fillText(emoji, 0, 64);
+          favicon.href = canvas.toDataURL();
+        }
+      }
+    </script>
     <link rel="icon" data-emoji="💧" type="image/png">
   </head>
   <body style="font-family: 'Roboto', sans-serif;">
