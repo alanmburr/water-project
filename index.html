@@ -93,9 +93,10 @@
                 <a><h1 style="display: inline;"><img src="https://www.salemmontessori.org/wp-content/uploads/2020/02/LogoHorizontal.png" alt="Salem Montessori" id="bLogo" data-height-percentage="100" style="padding-left: 2.5vw; vertical-align: middle; display: inline;" height="42"></h1></a>
                 <div class="navbar-right">
                     <select style="background-color: transparent; border: 1px solid black">
-                        <option value="" onclick="document.getElementById('mydiv').style.display = 'block'; document.getElementById('divTwo').style.display = 'none';">Change language...</option>
-                        <option value="en" onclick="document.getElementById('mydiv').style.display = 'block'; document.getElementById('divTwo').style.display = 'none';">English</option>
-                        <option value="sp" onclick="document.getElementById('divTwo').style.display = 'block';document.getElementById('mydiv').style.display = 'none';">Espa&#241;ol</option>
+                        <option value="" onclick="document.getElementById('en').style.display = 'block'; document.getElementById('sp').style.display = 'none';" disabled>Change language...</option>
+                        <option value="en" onclick="document.getElementById('en').style.display = 'block'; document.getElementById('sp').style.display = 'none';">English</option>
+                        <option value="sp" onclick="document.getElementById('sp').style.display = 'block';document.getElementById('en').style.display = 'none';">Espa&#241;ol</option>
+                        <option value="fr" disabled>Fran&#231;ais</option>
                     </select>
                     <!--<button onclick="document.getElementById('mydiv').style.display = 'block'; document.getElementById('divTwo').style.display = 'none';">EN</button>
                     <button onclick="document.getElementById('divTwo').style.display = 'block';document.getElementById('mydiv').style.display = 'none';">SP</button>-->
@@ -104,12 +105,16 @@
         </div>
         <div class="shade"></div>
         <div id="content" class="main">
-            <div class="myDiv" id="mydiv" lang="en">
+            <div class="myDiv" id="en" lang="en">
                 <h2>Water Project</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <div class="myDiv" id="divTwo" style="display: none;">
+            <div class="myDiv" id="sp" style="display: none;" lang="sp">
                 <h2>Proyecto de Agua</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="myDiv" id="fr" style="display: none;" lang="fr">
+                <h2>Fran&#231;ais</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </div>
